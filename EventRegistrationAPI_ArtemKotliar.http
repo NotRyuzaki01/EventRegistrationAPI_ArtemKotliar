@@ -1,0 +1,6 @@
+@EventRegistrationAPI_ArtemKotliar_HostAddress = http://localhost:5026
+
+GET {{EventRegistrationAPI_ArtemKotliar_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
