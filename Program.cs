@@ -16,6 +16,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IEventService, EventService>();
+builder.Services.AddScoped<IRegistrationService, RegistrationService>();
 
 var app = builder.Build();
 
