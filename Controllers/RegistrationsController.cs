@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EventRegistrationAPI_ArtemKotliar.Controllers;
 
+/// <summary>
+/// This is the controller for Registrations.
+/// </summary>
 [ApiController]
 [Route("api")]
 public class RegistrationsController : ControllerBase

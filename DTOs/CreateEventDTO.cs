@@ -3,6 +3,9 @@ using EventRegistrationAPI_ArtemKotliar.Validation;
 
 namespace EventRegistrationAPI_ArtemKotliar.DTOs;
 
+/// <summary>
+/// Data Transfer Object for creating the Event. 
+/// </summary>
 public class CreateEventDto
 {
     [Required(ErrorMessage = "Title is required.")]

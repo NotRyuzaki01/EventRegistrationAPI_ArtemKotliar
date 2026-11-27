@@ -2,6 +2,9 @@ using EventRegistrationAPI_ArtemKotliar.DTOs;
 
 namespace EventRegistrationAPI_ArtemKotliar.Services;
 
+/// <summary>
+/// Interface for the EventService. Promising functionality. 
+/// </summary>
 public interface IEventService
 {
     Task<List<EventDto>> GetAllAsync();

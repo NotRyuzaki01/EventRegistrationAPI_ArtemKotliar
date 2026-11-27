@@ -5,6 +5,9 @@ using EventRegistrationAPI_ArtemKotliar.Model;
 
 namespace EventRegistrationAPI_ArtemKotliar.Services;
 
+/// <summary>
+/// Event Service implementation. Handles the context to get all events, find an event by id and create a new event.
+/// </summary>
 public class EventService : IEventService
 {
     private readonly AppDbContext _context;

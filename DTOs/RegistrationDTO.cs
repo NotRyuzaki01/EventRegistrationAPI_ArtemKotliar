@@ -1,5 +1,8 @@
 namespace EventRegistrationAPI_ArtemKotliar.DTOs;
 
+/// <summary>
+/// The Data Transfer Object for Registration class.
+/// </summary>
 public class RegistrationDto
 {
     public int RegistrationId { get; set; }

@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EventRegistrationAPI_ArtemKotliar.Services;
 
+/// <summary>
+/// Event Service implementation. Handles the context to get registrations by event id, create a new registration and delete a registration. 
+/// </summary>
 public class RegistrationService : IRegistrationService
 {
     private readonly AppDbContext _context;

@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EventRegistrationAPI_ArtemKotliar.Controllers;
 
+/// <summary>
+/// This is the controller for Events. 
+/// </summary>
 [ApiController]
 [Route("api/events")]
 public class EventsController : ControllerBase

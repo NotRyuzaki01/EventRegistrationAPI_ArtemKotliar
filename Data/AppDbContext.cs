@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EventRegistrationAPI_ArtemKotliar.Data;
 
+/// <summary>
+/// DbContext to access the sqlite database. 
+/// </summary>
 public class AppDbContext : DbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options)
@@ -10,6 +13,7 @@ public class AppDbContext : DbContext
     {
     }
 
+    //Provides the access to the Events and Registration tables in the database with EF Core. 
     public DbSet<Event> Events { get; set; }
     public DbSet<Registration> Registrations { get; set; }
     

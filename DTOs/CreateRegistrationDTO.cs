@@ -2,6 +2,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EventRegistrationAPI_ArtemKotliar.DTOs;
 
+/// <summary>
+/// Data Transfer Object for creating the Registration.
+/// </summary>
 public class CreateRegistrationDto
 {
     [Required(ErrorMessage = "Student name is required.")]
