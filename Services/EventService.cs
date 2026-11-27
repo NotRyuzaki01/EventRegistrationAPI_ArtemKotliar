@@ -1,6 +1,7 @@
 using EventRegistrationAPI_ArtemKotliar.Data;
 using EventRegistrationAPI_ArtemKotliar.DTOs;
 using Microsoft.EntityFrameworkCore;
+using EventRegistrationAPI_ArtemKotliar.Model;
 
 namespace EventRegistrationAPI_ArtemKotliar.Services;
 
@@ -61,6 +62,32 @@ public class EventService : IEventService
             RegisteredCount = campusEvent.Registrations.Count,
             SpotsLeft = campusEvent.Capacity
                 - campusEvent.Registrations.Count
+        };
+    }
+    
+    public async Task<EventDto> CreateAsync(CreateEventDto dto)
+    {
+        var campusEvent = new Event
+        {
+            Title = dto.Title,
+            Location = dto.Location,
+            EventDate = dto.EventDate,
+            Capacity = dto.Capacity
+        };
+
+        _context.Events.Add(campusEvent);
+
+        await _context.SaveChangesAsync();
+
+        return new EventDto
+        {
+            EventId = campusEvent.EventId,
+            Title = campusEvent.Title,
+            Location = campusEvent.Location,
+            EventDate = campusEvent.EventDate,
+            Capacity = campusEvent.Capacity,
+            RegisteredCount = 0,
+            SpotsLeft = campusEvent.Capacity
         };
     }
 }
